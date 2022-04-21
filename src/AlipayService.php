@@ -33,7 +33,7 @@ class AlipayService
         ]);
     }
 
-    public function handelNotifyPayment(Request $request): array|null
+    public function handleNotifyPayment(Request $request): array|null
     {
         $data = $request->post();
 
