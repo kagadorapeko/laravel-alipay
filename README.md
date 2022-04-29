@@ -46,6 +46,9 @@ $alipayService = app(\KagaDorapeko\Laravel\Alipay\AlipayService::class);
 // 获取支付凭证
 $payload = $alipayService->handleAppPayment($amount, $orderNo, $callbackUrl);
 
+// 发起退款
+$alipayService->handleRefundAll($amount, $orderNo, '重复支付');
+
 // 注入请求
 $request = app(\Illuminate\Http\Request::class);
 
